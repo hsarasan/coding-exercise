@@ -57,7 +57,7 @@ This should create the following executables
   
   test_pad # run the unit tests using catch 
 
-  All executables are to be run like ./<executable>
+  All executables are to be run like ./exename
     
 
 Time complexity & Space Complexity
