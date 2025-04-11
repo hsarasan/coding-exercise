@@ -25,6 +25,12 @@ TEST_CASE("Negative Number", "[pad_whole_numbers_in_string]") {
     REQUIRE(pad_whole_numbers_in_string("Negative Number -1.2", 2) == "Negative Number -01.2");
 }
 
+TEST_CASE("Edge Cases", "[pad_whole_numbers_in_string]") {
+    REQUIRE(pad_whole_numbers_in_string("", 2) == "");
+    REQUIRE(pad_whole_numbers_in_string("1", 2) == "01");
+    REQUIRE(pad_whole_numbers_in_string("0.1", 2) == "00.1");
+}
+
 
 TEST_CASE("Mixed content", "[pad_whole_numbers_in_string]") {
     std::string input = "Code 8 at 12:34 and level 9.5";
