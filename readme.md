@@ -10,17 +10,17 @@ Source Code Structure
 
   root
       ---- src
-            -------- string_pad.cpp # implementation of the above functions
+            -------- string_pad.cpp // implementation of the above functions
       ---- include
-            -------- string_pad.h  # header file for the above functions
+            -------- string_pad.h  // header file for the above functions
       ----- example
-            -------- example_usage.cpp # example usage of pad_whole_numbers_in_string()
-            -------- example_stream.cpp # exmaple usage of pad_whole_numbers_in_stringstream()
-            -------- input.txt # example file used as input for filestream to use 
+            -------- example_usage.cpp // example usage of pad_whole_numbers_in_string()
+            -------- example_stream.cpp // exmaple usage of pad_whole_numbers_in_stringstream()
+            -------- input.txt // example file used as input for filestream to use 
       ----- test
-            -------- test_pad.cpp # unit test cases to be run with catch
-            -------- catch_amalgamated.hpp # testing framework source code downloaded from https://github.com/catchorg/Catch2/releases (latest version 3.8.1)
-            -------- catch_amalgamated.cpp # testing framework source code 
+            -------- test_pad.cpp // unit test cases to be run with catch
+            -------- catch_amalgamated.hpp // testing framework source code downloaded from https://github.com/catchorg/Catch2/releases (latest version 3.8.1)
+            -------- catch_amalgamated.cpp // testing framework source code 
       CMakeLists.txt 
       readme.md
 
