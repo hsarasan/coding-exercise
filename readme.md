@@ -1,10 +1,11 @@
 Overview
 
 There are two functions implemented 
-  a. pad_whole_numbers_in_string => This left pads every whole number of the input string with 0s
-  b. pad_whole_numbers_in_stringstream => This pads a characters from a stream (cin, stringstream, fstream etc) and left pads whole numbers with 0s
 
-  Numbers following . and : are not padded in both cases
+  a. pad_whole_numbers_in_string => This left pads every whole number of the input string with 0s
+  
+  b. pad_whole_numbers_in_stringstream => This pads a characters from a stream (cin, stringstream, fstream etc) and left pads whole numbers with 0s
+  
 
 Source Code Structure
 
@@ -38,7 +39,9 @@ Source Code Structure
       readme.md
 
 How to Build & use
+
       The source code was compiled with C++17 on Ubuntu 22.04. 
+
       Steps to build
 
       mkdir build
@@ -47,8 +50,11 @@ How to Build & use
       make
 
 This should create the following executables
+  
   example_program #to test the usage of pad_whole_number_in_string() 
+  
   example_stream  # to test usage of pad_whole_numbers_in_stringstream()
+  
   test_pad # run the unit tests using catch 
 
   All executables are to be run like ./<executable>
@@ -62,7 +68,7 @@ Time complexity & Space Complexity
 
   we loop over the string once leading to O(n)
   we also for every number detected, do a setw and setfill. So if there are m numbers this would lead to O(m*N)
-  So the total time complexity is O(n+n*N) => O(N*n)
+  So the total time complexity is O(n+m*N) 
 
   Space complexity is O(n) as we create a new string but the space could be increased by O(N*n) because we pad extra 0s
 
