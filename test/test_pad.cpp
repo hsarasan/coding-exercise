@@ -21,6 +21,14 @@ TEST_CASE("Odd Cases", "[pad_whole_numbers_in_string]") {
     REQUIRE(pad_whole_numbers_in_string("Decimal 3.14.2", 2) == "Decimal 03.14.2");
 }
 
+TEST_CASE("Uphold Provided Cases", "[pad_whole_numbers_in_string]") {
+    REQUIRE(pad_whole_numbers_in_string("James Bond 7", 3) == "James Bond 007");
+    REQUIRE(pad_whole_numbers_in_string("PI=3.14", 2) == "PI=03.14");
+    REQUIRE(pad_whole_numbers_in_string("It's 3:14PM", 2) == "It's 03:14PM");
+    REQUIRE(pad_whole_numbers_in_string("99UR1336", 6) == "000099UR001336");
+}
+
+
 TEST_CASE("Negative Number", "[pad_whole_numbers_in_string]") {
     REQUIRE(pad_whole_numbers_in_string("Negative Number -1.2", 2) == "Negative Number -01.2");
 }
