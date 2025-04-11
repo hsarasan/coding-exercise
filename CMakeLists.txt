@@ -26,3 +26,16 @@ target_link_libraries(example_stream string_pad)
 # Copy the input.txt file from the examples directory to the build directory
 configure_file(${CMAKE_SOURCE_DIR}/example/input.txt ${CMAKE_BINARY_DIR}/input.txt COPYONLY)
 
+# Add test executable
+add_executable(test_pad test/test_pad.cpp test/catch_amalgamated.cpp)
+
+# Link your library
+target_link_libraries(test_pad string_pad)
+
+# Include test directory for catch_amalgamated.hpp
+target_include_directories(test_pad PRIVATE ${CMAKE_SOURCE_DIR}/test)
+
+# Enable testing and define the test
+enable_testing()
+add_test(NAME pad_tests COMMAND test_pad)
+
